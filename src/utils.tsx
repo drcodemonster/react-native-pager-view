@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 
 export const childrenWithOverriddenStyle = (children?: ReactNode) => {
   return Children.map(children, (child) => {
+    if (!child) return;
     const element = child as React.ReactElement;
     return (
       // Add a wrapper to ensure layout is calculated correctly
